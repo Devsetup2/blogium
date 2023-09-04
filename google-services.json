@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288400225710",
+    "project_id": "shopco-f4eb4",
+    "storage_bucket": "shopco-f4eb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288400225710:android:b195055cf3cfb2de7f843f",
+        "android_client_info": {
+          "package_name": "com.apk.shopco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288400225710-nk1hqs5r9lms5kgttre91t9r99p1f0br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA82wRlXK2no4k_sjLI7_Z0pIoJfkKGl1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288400225710-nk1hqs5r9lms5kgttre91t9r99p1f0br.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
