@@ -1,252 +1,153 @@
 
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Blogium</title>
+  <link rel="stylesheet" href="./style.css">
 
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopco</title>
-    <style>
-        body {
-            background-color: #fff;
-            color: #09122C;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex: 1;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .search-bar input[type="text"] {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .search-bar button {
-            padding: 8px 16px;
-            background-color: #EB5B00;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .hamburger-menu {
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-
-        .navbar {
-            display: none;
-            flex-direction: column;
-            background-color: #fff;
-            border: 1px solid #ffffff;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            width: 200px;
-            z-index: 1000;
-        }
-        a{
-            text-decoration:none;
-            color: #fff;
-        }
-
-        .navbar a {
-            padding: 10px;
-            text-decoration: none;
-            color: #09122C;
-            border-bottom: 1px solid #EB5B00;
-        }
-
-        .navbar a:hover {
-            background-color: #EB5B00;
-            color: #fff;
-        }
-
-        footer {
-            background-color: #EB5B00;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .donate-button {
-            background-color: #fff;
-            color: #EB5B00;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .product-card img {
-            max-width: 100%;
-            border-radius: 4px;
-        }
-
-        .product-card button {
-            margin-top: 10px;
-            padding: 8px 16px;
-            background-color: #EB5B00;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .product-card button:hover {
-            background-color: #c68b2f;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const hamburgerMenu = document.querySelector(".hamburger-menu");
-            const navbar = document.querySelector(".navbar");
-
-            hamburgerMenu.addEventListener("click", () => {
-                navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
-            });
-        });
-    </script>
+    <title>Blogium - Medium Benzeri Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="favicon.png" alt="Temu.com">
-            <h4>Shopco</h4>
+<body class="bg-gray-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" id="homeBtn" class="text-2xl font-bold text-green-600">Blogium</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="writeBtn" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-pen mr-1"></i><button>Yaz</button>
+                    </button>
+                    <button id="savedBtn" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-bookmark mr-1"></i> Kaydedilenler
+                    </button>
+                    <div class="relative">
+                        <button id="userBtn" class="flex items-center text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-user-circle text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search">
-            <button>Search</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <section id="heroSection" class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Fikirlerinizi dünyayla paylaşın</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Blogium'da yazılarınızı yayınlayın, başkalarının yazılarını keşfedin ve ilham alın.
+            </p>
+        </section>
+
+        <!-- Articles Grid -->
+        <section id="articlesSection" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Articles will be loaded here -->
+        </section>
+
+        <!-- Write Modal -->
+        <div id="writeModal" class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="bg-white rounded-lg w-full max-w-3xl mx-4">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Yeni Yazı</h3>
+                            <button id="closeWriteModal" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <form id="articleForm">
+                            <div class="mb-4">
+                                <label for="articleTitle" class="block text-gray-700 mb-2">Başlık</label>
+                                <input type="text" id="articleTitle" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="articleDescription" class="block text-gray-700 mb-2">Açıklama</label>
+                                <textarea id="articleDescription" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                            </div>
+                            <div class="mb-4">
+                                <label for="articleImage" class="block text-gray-700 mb-2">Resim URL</label>
+                                <input type="text" id="articleImage" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="articleLink" class="block text-gray-700 mb-2">Yazı Linki</label>
+                                <input type="text" id="articleLink" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="articleTags" class="block text-gray-700 mb-2">Etiketler (virgülle ayırın)</label>
+                                <input type="text" id="articleTags" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div class="flex justify-end space-x-3">
+                                <button type="button" id="cancelArticle" class="px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50">İptal</button>
+                                <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Yayınla</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hamburger-menu">&#9776;</div>
-        <nav class="navbar">
-            <a href="#">Kuponlar</a>
-            <a href="#">Ürünler</a>
-            <a href="#">Blog</a>
-            <a href="#">İletişim</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="products">
-            <div class="product-card">
-                <img src="https://i.imgur.com/GRor1cU.png" alt="1500Tl Kupon Temu.com">
-                <h3>⭐️ 1.500 TL Kupon Paketinizi Kazanın!</h3>
-                <p>Temu link Kayıt Ol Anında 1500Tl Kupon Hediye Kazan</p>
-                <a href="https://app.temu.com/m/n332iz2kbt5"><button>Detay</button></a>
+        <!-- Article Detail Modal -->
+        <div id="articleModal" class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden overflow-y-auto">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="bg-white rounded-lg w-full max-w-4xl mx-4 my-8">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 id="modalArticleTitle" class="text-2xl font-bold"></h3>
+                            <button id="closeArticleModal" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-user-circle text-2xl text-gray-500 mr-2"></i>
+                                <span class="text-gray-600">Yazar</span>
+                            </div>
+                            <span class="mx-2 text-gray-400">·</span>
+                            <span id="modalArticleDate" class="text-gray-600"></span>
+                        </div>
+                        <img id="modalArticleImage" src="" alt="" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <p id="modalArticleDescription" class="text-gray-700 mb-6"></p>
+                        <div class="flex flex-wrap mb-6" id="modalArticleTags"></div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-4">
+                                <button class="text-gray-500 hover:text-green-600">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class="text-gray-500 hover:text-green-600">
+                                    <i class="far fa-comment"></i>
+                                </button>
+                                <button class="text-gray-500 hover:text-green-600">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                            <button id="saveArticleBtn" class="text-gray-500 hover:text-green-600">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="product-card">
-                <img src="https://i.pinimg.com/736x/e8/1f/e5/e81fe5543dc25af45560011210a5c6f5.jpg" alt="Temu akıllı saat">
-                <h3>138,75 TL</h3>
-                <p>Erkekler ve Kadınlar için Çok Fonksiyonlu Android Telefonlar için Akıllı Saat</p>
-                <button><a href="https://temu.to/k/e9o2x3ziqv0">Temu Satın Al</a></button>
-            </div>
-            <div class="product-card">
-                <img src="https://i.pinimg.com/736x/50/4f/7a/504f7a9489d27de61bbcbf05eb04643d.jpg" alt="Erkekler için Nefes Alabilir Spor Ayakkabılar">
-                <h3>361,54 TL</h3>
-                <p>Erkekler için Nefes Alabilir Spor Ayakkabılar</p>
-                <button><a href="https://temu.to/k/e5p4qpysq2p">Temu Satın Al</a></button>
-            </div>
-            <div class="product-card">
-                <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/083c82398588cc38401268966ed99bef.jpg?imageView2/2/w/800/q/70/format/webp" alt="">
-                <h3>39,94 TL</h3>
-                <p>Erkek Ayarlanabilir Göğüs Çantası Açık Dağcılık Bisiklet Tek Omuz Eğimli Çapraz Oxford Bez Göğüs Çantası</p>
-                <button><a href="https://temu.to/k/e9g58554wlb">Temu Satın Al</a></button>
-            </div>
-        </section>
+        </div>
     </main>
-    <br>
-    <main>
-        <section class="products">
-            <div class="product-card">
-                <img src="data:image/jpeg;base64,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" alt="Temu %30 İndirim">
-                <h3>Temu İndirim Kuponları Burada.</h3>
-                <p>Alışverişlerinizde Tasarruf etmenizi sağlıyoruz.</p>
-                <button><a href="https://temu.to/k/e5p4qpysq2p">Cooming Soo</a></button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h3>Cooming Soo</h3>
-                <p>Cooming Soo</p>
-                <button><a href="https://temu.to/k/e5p4qpysq2p">Cooming Soo</a></button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h3>Cooming Soo</h3>
-                <p>Cooming Soo</p>
-                <button><a href="https://temu.to/k/e5p4qpysq2p">Cooming Soo</a></button>
-            </div>
-            <div class="product-card">
-                <img src="" alt="">
-                <h3>Cooming Soo</h3>
-                <p>Cooming Soo</p>
-                <button><a href="https://temu.to/k/e5p4qpysq2p">Cooming Soo</a></button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-    
-        <p>&copy; 2025 Shopco Satış Ortaklığı sistemi Tüm Hakları Saklıdır!</p>
-    </footer>
 </body>
 </html>
+<!-- partial -->
+  <script  src="./script.js"></script>
 
+</body>
+</html>
