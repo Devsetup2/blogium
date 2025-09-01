@@ -136,6 +136,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     link: '#',
                     tags: ['css', 'tailwind', 'tasarım'],
                     date: '2023-07-10'
+                },
+                {
+                    id: '4',
+                    title: 'Prompt Engineering',
+                    description: 'Bir  Yapay Zeka modelinin nasıl çalışacağını veya nasıl yanıt vereceğini belirleyen ilk girdidir. Özellikle üretken yapay zeka gibi modeller, verilen bir komut istemine göre içerik üretmeye çalışır.',
+                    image: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                    link: 'https://devsetup2.github.io/blogium/promptengineering.html',
+                    tags: ['prompt-engineering,ChatGPT,Data'],
+                    date: '1.9.2025'
                 }
             ];
             localStorage.setItem('articles', JSON.stringify(sampleArticles));
